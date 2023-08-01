@@ -66,7 +66,7 @@ export const HeaderMenu = ({ globalData }: HeaderMenuProps) => {
             </List.Item>
           )}
         />
-      </Drawer>
+      </Drawer
     </div>
   );
 };
