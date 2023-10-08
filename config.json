@@ -3,7 +3,8 @@
 		"HeaderMenu-5ef64ab5": {
 			"name": "HeaderBackground",
 			"imagePath": "bg.jpeg",
-			"description": "HeaderBackground"
+			"description": "HeaderBackground",
+			"itemInputs":[]
 		}
 	},
 	"version": "0.0.71"
