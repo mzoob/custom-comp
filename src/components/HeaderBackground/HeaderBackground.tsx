@@ -3,12 +3,7 @@ import { useEffect, useState } from 'react';
 import styles from './HeaderBackground.module.scss';
 import * as cx from 'classnames';
 
-
-interface HeaderMenuProps {
-  globalData: Record<string, any>;
-}
-
-export const HeaderMenu = (props: HeaderMenuProps) => {
+export const HeaderMenu = () => {
   const [isOffTop, setIsOffTop] = useState(false);
 
   const handleScroll = () => {
