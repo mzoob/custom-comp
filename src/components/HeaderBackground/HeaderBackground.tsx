@@ -8,6 +8,7 @@ export const HeaderMenu = () => {
 
   const handleScroll = () => {
     const scrollTop = document.documentElement.scrollTop;
+    console.log(scrollTop);
     setIsOffTop(scrollTop > 0 ? true : false);
     return;
   }
