@@ -1,3 +1,4 @@
-import { HeaderMenu } from './HeaderMenu';
+import { HeaderMenu } from './HeaderBackground';
+import { ScrollAnimation } from './ScrollAnimation';
 
-export default { HeaderMenu };
+export default { HeaderMenu, ScrollAnimation };

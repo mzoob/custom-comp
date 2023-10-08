@@ -1,0 +1,26 @@
+$gap-small: 10px;
+
+$header-height: 64px;
+$font-size: 16px;
+
+$navigation-item-height: 48px;
+
+.headerMenuContainer {
+  box-sizing: border-box;
+  position: fixed;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  height: $header-height;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+  padding: 0 60px;
+  transition: all .3s;
+  font-family: MiSans;
+  font-size: $font-size;
+}
+
+.headerMenuStickToTop {
+  background-color: #fff;
+}

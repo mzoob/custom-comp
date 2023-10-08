@@ -1,0 +1,21 @@
+.container {
+  background-color: #174270;
+  position: relative;
+  overflow: hidden;
+  height: 2000px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.demoBox {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+}
+
+.cover {
+  width: 100%;
+  height: fit-content;
+  // object-fit: cover;
+}

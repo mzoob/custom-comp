@@ -14,7 +14,9 @@
     "classnames": "^2.3.2",
     "immer": "^10.0.1",
     "lodash": "^4.17.21",
+    "misans": "^3.1.1",
     "moment": "^2.29.4",
+    "rc-scroll-anim": "^2.7.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0"
