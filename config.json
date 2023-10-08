@@ -1,9 +1,9 @@
 {
 	"customComponentItems": {
 		"HeaderMenu-5ef64ab5": {
-			"name": "HeaderMenu",
-			"imagePath": "111.jpeg",
-			"description": "item1"
+			"name": "HeaderBackground",
+			"imagePath": "bg.jpeg",
+			"description": "HeaderBackground"
 		}
 	},
 	"version": "0.0.7"
