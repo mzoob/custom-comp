@@ -4,7 +4,16 @@
 			"name": "HeaderBackground",
 			"imagePath": "bg.jpeg",
 			"description": "HeaderBackground",
-			"itemInputs":[]
+			"itemInputs": [
+                                {
+                                        "fieldName": "123",
+                                        "type": "TEXT"
+                                },
+                                {
+                                        "fieldName": "1234",
+                                        "type": "FLOAT8"
+                                }
+                        ]
 		}
 	},
 	"version": "0.0.71"
