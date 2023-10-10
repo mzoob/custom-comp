@@ -1,25 +1,20 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useState } from 'react';
+import { useState, useRef } from 'react';
 import styles from './HeaderBackground.module.scss';
 import * as cx from 'classnames';
 
 export const HeaderMenu = () => {
   const [isOffTop, setIsOffTop] = useState(false);
+  const myRef = useRef<HTMLInputElement>(null);
 
-  const handleScroll = () => {
-    const scrollTop = document.documentElement.scrollTop;
-    console.log(scrollTop);
-    setIsOffTop(scrollTop > 0 ? true : false);
-    return;
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  })
+  setInterval(() => {
+    const offsetTop = myRef.current?.offsetTop;
+    if (offsetTop) {
+      setIsOffTop(offsetTop > 0 ? true : false);
+    }
+  }, 500);
 
   return (
-    <div className={cx(styles.headerMenuContainer, isOffTop && styles.headerMenuStickToTop)}>
-    </div>
+    <div ref={myRef} className={cx(styles.headerMenuContainer, isOffTop && styles.headerMenuStickToTop)} />
   );
 };

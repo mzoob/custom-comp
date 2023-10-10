@@ -7,7 +7,7 @@ $navigation-item-height: 48px;
 
 .headerMenuContainer {
   box-sizing: border-box;
-  position: fixed;
+  position: sticky;
   align-items: center;
   flex-direction: row;
   display: flex;
