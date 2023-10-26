@@ -9,10 +9,11 @@ export const HeaderMenu = () => {
 
   setInterval(() => {
     const offsetTop = myRef.current?.offsetTop;
+    console.log(offsetTop);
     if (offsetTop) {
       setIsOffTop(offsetTop > 0 ? true : false);
     }
-  }, 500);
+  }, 1000);
 
   return (
     <div ref={myRef} className={cx(styles.headerMenuContainer, isOffTop && styles.headerMenuStickToTop)} />

@@ -1,27 +1,49 @@
-import { Parallax } from 'rc-scroll-anim';
+import { useState } from 'react';
 import styles from './scrollAnimation.module.scss';
-import cover from './cover.jpeg';
+import styled, { keyframes } from "styled-components";
 
-export const ScrollAnimation = () => {
-  return <div className={styles.container}>
-    <Parallax
-      animation={[
-        { width: '100vw', playScale: [0, 0.9]},
-        // { position: 'fixed', playScale: [0, 0.1]},
-        // { blur: '0px', backgroundColor: '#F38EAD', playScale: [0, 0.2] },
-        // {
-        //   translateX: -100,
-        //   boxShadow: '5px 5px 5px #000',
-        //   color: '#fff000',
-        //   playScale: [0, 0.2],
-        // },
-        // { translateX: 100, playScale: [0, 0.2] },
-        // { translateX: 0, playScale: [0, 0.2] },
-      ]}
-      style={{ display: 'flex', justifyContent: 'center', width: '40vw' }}
-      className="demo-content parallax-shape"
-    >
-      <img className={styles.cover} src={cover}/>
-    </Parallax>
-  </div>
+
+interface Props {
+  globalData: Record<string, any>;
+  logoArray?: string[];
 }
+
+export const ScrollAnimation = (props: Props) => {
+  const { logoArray } = props;
+  console.log(logoArray);
+
+  const logoWith = 160;
+  const logoNumbers = logoArray?.length || 0;
+  const singleSlideTrackWidth = logoWith * logoNumbers;
+  const animationDuration = logoNumbers * 4;
+
+
+  const spin = keyframes`
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-${singleSlideTrackWidth}px);}`;
+
+  const ScrollDiv = styled.div`
+    animation: ${animationDuration}s ${spin} linear infinite;
+    width: ${singleSlideTrackWidth * 2}px;
+  `;
+
+  const Slide = (classname:string, imgSrc:string) => {
+    return (
+      <div className={classname}>
+        <img 
+          className={styles.logo} 
+          src={`${imgSrc}`}
+        />
+      </div>
+    )
+  }
+
+  return (
+    <div className={styles.slider} >
+      <ScrollDiv className={styles.slideTrack}>
+        {logoArray?.map(logo => Slide(styles.slide, logo))}
+        {logoArray?.map(logo => Slide(styles.slide1, logo))}
+      </ScrollDiv>
+    </div>
+  );
+};
