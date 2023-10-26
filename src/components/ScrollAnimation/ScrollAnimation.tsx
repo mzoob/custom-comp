@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styles from './scrollAnimation.module.scss';
 import styled, { keyframes } from "styled-components";
 

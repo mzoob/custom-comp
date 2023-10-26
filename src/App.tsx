@@ -1,4 +1,3 @@
-import { HeaderMenu } from './components/HeaderBackground';
 import { ScrollAnimation } from './components/ScrollAnimation';
 import './App.scss';
 import { BrowserRouter } from 'react-router-dom';
