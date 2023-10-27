@@ -4,15 +4,15 @@ import styled, { keyframes } from "styled-components";
 
 interface Props {
   globalData: Record<string, any>;
-  logoArray?: string[];
+  logoUrlsString?: string;
 }
 
 export const ScrollAnimation = (props: Props) => {
-  const { logoArray } = props;
-  console.log(logoArray);
+  const { logoUrlsString } = props;
+  const logoUrlArray = logoUrlsString?.split(',') || [];
 
   const logoWith = 160;
-  const logoNumbers = logoArray?.length || 0;
+  const logoNumbers = logoUrlArray.length || 0;
   const singleSlideTrackWidth = logoWith * logoNumbers;
   const animationDuration = logoNumbers * 4;
 
@@ -40,8 +40,8 @@ export const ScrollAnimation = (props: Props) => {
   return (
     <div className={styles.slider} >
       <ScrollDiv className={styles.slideTrack}>
-        {logoArray?.map(logo => Slide(styles.slide, logo))}
-        {logoArray?.map(logo => Slide(styles.slide1, logo))}
+        {logoUrlArray?.map(logo => Slide(styles.slide, logo))}
+        {logoUrlArray?.map(logo => Slide(styles.slide1, logo))}
       </ScrollDiv>
     </div>
   );
