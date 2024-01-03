@@ -3,7 +3,7 @@
 
 import Spline from '@splinetool/react-spline';
 
-export function MySpline() {
+export default function MySpline() {
   return (
     <Spline scene="https://prod.spline.design/oNF4Mb9WsNh0q8zM/scene.splinecode" />
   );
