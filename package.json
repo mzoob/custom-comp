@@ -22,7 +22,9 @@
     "react-dom": "^18.2.0",
     "react-infinite-scroller": "^1.2.6",
     "react-router-dom": "^6.10.0",
-    "styled-components": "^6.1.0"
+    "styled-components": "^6.1.0",
+    "@splinetool/react-spline": "^2.2.1",
+    "@splinetool/runtime": "^1.0.17"
   },
   "devDependencies": {
     "@originjs/vite-plugin-federation": "^1.2.2",
