@@ -1,1 +1,1 @@
-export * from './Spline';
+export * from './MySpline';
