@@ -1,5 +1,5 @@
 import { HeaderMenu } from './HeaderBackground';
 import { ScrollAnimation } from './ScrollAnimation';
-import { Spline } from './Spline';
+import { MySpline } from './MySpline';
 
-export default { HeaderMenu, ScrollAnimation, Spline };
+export default { HeaderMenu, ScrollAnimation, MySpline };
