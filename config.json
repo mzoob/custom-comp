@@ -26,8 +26,8 @@
                                 }
                         ]
 		},
-		"Spline": {
-			"name": "Spline",
+		"MySpline": {
+			"name": "MySpline",
 			"imagePath": "bg.jpeg",
 			"description": "Spline",
 			"itemInputs": [
